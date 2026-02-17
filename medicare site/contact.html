@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | MediCare+</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.container {
+    padding: 100px 20px;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: #00B894;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #00B894;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: translateX(-5px);
+}
+
+</style>
+</head>
+
+<body>
+<button class="back-btn" onclick="goHome()">← Back</button>
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <p>
+        Have questions or need assistance? Our team is here to help.
+        Reach out to us using the information below or send us a message.
+    </p>
+
+    <h3>📍 Office Address</h3>
+    <p>123 Health Street, Medical City, Country</p>
+
+    <h3>📞 Phone</h3>
+    <p>+1 234 567 8900</p>
+
+    <h3>📧 Email</h3>
+    <p>support@medicareplus.com</p>
+
+    <hr style="margin: 30px 0;">
+
+    <h2>Send Us a Message</h2>
+
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <textarea rows="5" placeholder="Your Message"></textarea><br>
+    <button onclick="sendMessage()">Send Message</button>
+
+    <p id="successMsg" style="color: green; margin-top: 10px;"></p>
+</div>
+
+<button class="back-btn" onclick="goHome()">← Back</button>
+<script>
+function goHome() {
+    window.location.href = "index.html";
+}
+function sendMessage() {
+    document.getElementById("successMsg").innerText =
+        "Thank you! Your message has been sent successfully.";
+}
+
+</script>
+
+</body>
+</html>
